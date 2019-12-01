@@ -56,7 +56,7 @@ void draw(){
 // angle measure. When in auto mode, the AS will calculate adjustment angles which will be sent 
 // as an instruction to the PS
 void auto_mode(){
-   String current_high_sensor = lis.calculate_highest_intensity_sensor();
+   /*String current_high_sensor = lis.calculate_highest_intensity_sensor();
    if(current_high_sensor.equals(lis.get_previous_high_sensor() ) == false){
      int adjustment_angles[] = as.calculate_adjustment_angles(current_high_sensor);      
      String new_instruction = make_instruction("PS_moveSystem", adjustment_angles);
@@ -64,5 +64,11 @@ void auto_mode(){
      println(new_instruction);
      send_instruction(new_instruction, ps.get_serial_port()); 
      lis.set_previous_high_sensor(current_high_sensor);
-   }
+   }*/
+     int adjustment_angles[] = as.calculate_adjustment_angles();      
+     String new_instruction = make_instruction("PS_moveSystem", adjustment_angles);
+     ps.set_servo_angles(adjustment_angles);
+     println(new_instruction);
+     send_instruction(new_instruction, ps.get_serial_port()); 
+     delay(2000);
 }

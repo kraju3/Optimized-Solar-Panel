@@ -1,4 +1,4 @@
-// GUI version of the Position System (PS). Keeps track of the pins and angle measures. Contains a 
+                                                                                                              // GUI version of the Position System (PS). Keeps track of the pins and angle measures. Contains a 
 // serial port to communicate with the Arduino PS. 
 //
 // Each array that pertain to the PS will have a specific ordering
@@ -8,7 +8,7 @@
 
 class Position_System{
    public  int num_servos = 2;
-   private int servo_pins[] = {7,8};   // [0]a, [1]b
+   private int servo_pins[] = {7,8};   // [0]a, [1]b                                         
    private int servo_angles[] = {0,0}; 
   
    private Serial serial_port;

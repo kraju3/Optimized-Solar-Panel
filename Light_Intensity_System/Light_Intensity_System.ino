@@ -1,3 +1,5 @@
+#include <TimedAction.h>
+
 // The Light Intensity System (LIS) is the detection method for the Solar Panel System to 
 // determine where the highest intensity of light is. The LIS is constantly updating the 
 // processing GUI via serial communication. This gives a live stream of data. The LIS 
@@ -8,7 +10,6 @@
 //
 // Note: The front of the LIS is indicated by an F written on the breadboard. 
 
-#include <TimedAction.h>
 #include "LIS.h"
 
 Light_Intensity_System lis;

@@ -1,7 +1,7 @@
 // Button and input field event actions. Each function corresponds to a button action. The controlEvent function
 // corresponds to a user selected value from a drop down list. 
 
-
+import controlP5.*;
 
 // Changes to the home screen. 
 void home(){
@@ -50,9 +50,6 @@ void pins(){
  String instruction2 = get_instruction("lis pin input fields", "lis_setPins");
  
  w.println_message_box("PINS INSTRUCTION NOT FINISHED");
- println("NOT FINISHED");
- println(instruction1);
- println(instruction2);
 }
 
 // Changes to the options screen.
